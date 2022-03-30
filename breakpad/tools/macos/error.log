@@ -1,0 +1,265 @@
+Operating system: Mac OS X
+                  12.2.1 21D62
+CPU: amd64
+     family 6 model 158 stepping 13
+     16 CPUs
+
+GPU: UNKNOWN
+
+Crash reason:  EXC_BAD_ACCESS / KERN_INVALID_ADDRESS
+Crash address: 0x42
+Process uptime: 1 seconds
+
+Thread 0 (crashed)
+ 0  buggy_app!aBuggyFunction() + 0x27
+    rax = 0x0000000000000042   rdx = 0x0000000000000000
+    rcx = 0xb2e5af2579a200a2   rbx = 0x0000000104abc060
+    rsi = 0x0000600002960000   rdi = 0x00007ff7bb4ab9b8
+    rbp = 0x00007ff7bb4ab990   rsp = 0x00007ff7bb4ab980
+     r8 = 0x00000000090008ff    r9 = 0x0000000000000003
+    r10 = 0x000070000e47a000   r11 = 0x0000000000000246
+    r12 = 0x000000010fabd3a0   r13 = 0x00007ff7bb4aba98
+    r14 = 0x0000000104a597a0   r15 = 0x000000010faa9010
+    rip = 0x0000000104a59787
+    Found by: given as instruction pointer in context
+ 1  buggy_app!_main + 0x46
+    rbp = 0x00007ff7bb4ab9e0   rsp = 0x00007ff7bb4ab9a0
+    rip = 0x0000000104a597e6
+    Found by: previous frame's frame pointer
+ 2  0x10fa424fe
+    rbp = 0x00007ff7bb4abaf0   rsp = 0x00007ff7bb4ab9f0
+    rip = 0x000000010fa424fe
+    Found by: previous frame's frame pointer
+
+Loaded modules:
+0x104a54000 - 0x104a77fff  buggy_app  ???  (main)
+0x7ff819dcc000 - 0x7ff819dcdfff  libsystem_blocks.dylib  ???
+0x7ff819dce000 - 0x7ff819e04fff  libxpc.dylib  ???
+0x7ff819e05000 - 0x7ff819e1dfff  libsystem_trace.dylib  ???
+0x7ff819e1e000 - 0x7ff819eb0fff  libcorecrypto.dylib  ???
+0x7ff819eb1000 - 0x7ff819edcfff  libsystem_malloc.dylib  ???
+0x7ff819edd000 - 0x7ff819f23fff  libdispatch.dylib  ???
+0x7ff819f24000 - 0x7ff819f5dfff  libobjc.A.dylib  ???
+0x7ff819f5e000 - 0x7ff819f60fff  libsystem_featureflags.dylib  ???
+0x7ff819f61000 - 0x7ff819fe9fff  libsystem_c.dylib  ???
+0x7ff819fea000 - 0x7ff81a042fff  libc++.1.dylib  ???
+0x7ff81a043000 - 0x7ff81a058fff  libc++abi.dylib  ???
+0x7ff81a059000 - 0x7ff81a08ffff  libsystem_kernel.dylib  ???
+0x7ff81a090000 - 0x7ff81a09bfff  libsystem_pthread.dylib  ???
+0x7ff81a09c000 - 0x7ff81a0a7fff  libdyld.dylib  ???
+0x7ff81a0a8000 - 0x7ff81a0b1fff  libsystem_platform.dylib  ???
+0x7ff81a0b2000 - 0x7ff81a0dcfff  libsystem_info.dylib  ???
+0x7ff81a0dd000 - 0x7ff81a5dffff  CoreFoundation  ???
+0x7ff81a5e0000 - 0x7ff81a83afff  LaunchServices  ???
+0x7ff81a83b000 - 0x7ff81a957fff  MetalTools  ???
+0x7ff81a958000 - 0x7ff81abb9fff  libBLAS.dylib  ???
+0x7ff81abba000 - 0x7ff81ac04fff  Lexicon  ???
+0x7ff81ac05000 - 0x7ff81ac73fff  libSparse.dylib  ???
+0x7ff81ac74000 - 0x7ff81aceefff  SystemConfiguration  ???
+0x7ff81acef000 - 0x7ff81ad23fff  libCRFSuite.dylib  ???
+0x7ff81ad24000 - 0x7ff81af62fff  libmecabra.dylib  ???
+0x7ff81af63000 - 0x7ff81b31dfff  Foundation  ???
+0x7ff81b31e000 - 0x7ff81b40cfff  LanguageModeling  ???
+0x7ff81b40d000 - 0x7ff81b538fff  CoreDisplay  ???
+0x7ff81b539000 - 0x7ff81b7cafff  AudioToolboxCore  ???
+0x7ff81b7cb000 - 0x7ff81b9b4fff  CoreText  ???
+0x7ff81b9b5000 - 0x7ff81c0dcfff  CoreAudio  ???
+0x7ff81c0dd000 - 0x7ff81c43cfff  Security  ???
+0x7ff81c43d000 - 0x7ff81c6c5fff  libicucore.A.dylib  ???
+0x7ff81c6c6000 - 0x7ff81c6cffff  libsystem_darwin.dylib  ???
+0x7ff81c6d0000 - 0x7ff81c9bbfff  CarbonCore  ???
+0x7ff81c9fb000 - 0x7ff81ca37fff  CoreServicesStore  ???
+0x7ff81ca38000 - 0x7ff81caedfff  IOKit  ???
+0x7ff81caee000 - 0x7ff81cafcfff  libsystem_notify.dylib  ???
+0x7ff81dc6c000 - 0x7ff81dc7ffff  UniformTypeIdentifiers  ???
+0x7ff81e13f000 - 0x7ff81eb08fff  libnetwork.dylib  ???
+0x7ff81eb09000 - 0x7ff81ef9ffff  CFNetwork  ???
+0x7ff81efa0000 - 0x7ff81efb5fff  libsystem_networkextension.dylib  ???
+0x7ff81efb6000 - 0x7ff81efb6fff  libenergytrace.dylib  ???
+0x7ff81efb7000 - 0x7ff81f002fff  libMobileGestalt.dylib  ???
+0x7ff81f003000 - 0x7ff81f019fff  libsystem_asl.dylib  ???
+0x7ff81f01a000 - 0x7ff81f032fff  TCC  ???
+0x7ff81f033000 - 0x7ff81f3c8fff  SkyLight  ???
+0x7ff81f3c9000 - 0x7ff81fa94fff  CoreGraphics  ???
+0x7ff81fa95000 - 0x7ff81fb90fff  ColorSync  ???
+0x7ff81fb91000 - 0x7ff81fbecfff  HIServices  ???
+0x7ff820048000 - 0x7ff820462fff  CoreData  ???
+0x7ff820463000 - 0x7ff82047cfff  ProtocolBuffer  ???
+0x7ff82047d000 - 0x7ff820641fff  libsqlite3.dylib  ???
+0x7ff8206d6000 - 0x7ff82078dfff  BaseBoard  ???
+0x7ff82078e000 - 0x7ff8207e3fff  RunningBoardServices  ???
+0x7ff8207e4000 - 0x7ff820851fff  AE  ???
+0x7ff820852000 - 0x7ff82085afff  libdns_services.dylib  ???
+0x7ff82085b000 - 0x7ff820862fff  libsystem_symptoms.dylib  ???
+0x7ff820863000 - 0x7ff820a13fff  Network  ???
+0x7ff820a14000 - 0x7ff820a41fff  CoreAnalytics  ???
+0x7ff820a42000 - 0x7ff820a44fff  libDiagnosticMessagesClient.dylib  ???
+0x7ff820a45000 - 0x7ff820a94fff  MetadataUtilities  ???
+0x7ff820a95000 - 0x7ff820b2ffff  Metadata  ???
+0x7ff820b30000 - 0x7ff820b36fff  DiskArbitration  ???
+0x7ff820b37000 - 0x7ff8211d7fff  vImage  ???
+0x7ff8211d8000 - 0x7ff8214c0fff  QuartzCore  ???
+0x7ff8214c1000 - 0x7ff82150afff  libFontRegistry.dylib  ???
+0x7ff821751000 - 0x7ff82175cfff  OpenDirectory  ???
+0x7ff82175d000 - 0x7ff821778fff  CFOpenDirectory  ???
+0x7ff821779000 - 0x7ff821785fff  FSEvents  ???
+0x7ff821786000 - 0x7ff8217aafff  SharedFileList  ???
+0x7ff8217ab000 - 0x7ff8217adfff  libapp_launch_measurement.dylib  ???
+0x7ff8217ae000 - 0x7ff8217f5fff  CoreAutoLayout  ???
+0x7ff8217f6000 - 0x7ff8218d8fff  libxml2.2.dylib  ???
+0x7ff8218d9000 - 0x7ff82192afff  CoreVideo  ???
+0x7ff822996000 - 0x7ff8229b2fff  libsystem_containermanager.dylib  ???
+0x7ff8229b3000 - 0x7ff8229c4fff  IOSurface  ???
+0x7ff8229c5000 - 0x7ff8229cdfff  IOAccelerator  ???
+0x7ff8229ce000 - 0x7ff822b04fff  Metal  ???
+0x7ff822b05000 - 0x7ff822b27fff  caulk  ???
+0x7ff822b28000 - 0x7ff822c28fff  CoreMedia  ???
+0x7ff822c29000 - 0x7ff822d65fff  libFontParser.dylib  ???
+0x7ff8230a5000 - 0x7ff8232eefff  ImageIO  ???
+0x7ff8232ef000 - 0x7ff823667fff  CoreImage  ???
+0x7ff823668000 - 0x7ff8236d8fff  MPSCore  ???
+0x7ff8236d9000 - 0x7ff8236dcfff  libsystem_configuration.dylib  ???
+0x7ff8236dd000 - 0x7ff8236e1fff  libsystem_sandbox.dylib  ???
+0x7ff8236e2000 - 0x7ff8236e3fff  AggregateDictionary  ???
+0x7ff8236e4000 - 0x7ff8236e7fff  AppleSystemInfo  ???
+0x7ff8236e8000 - 0x7ff8236e9fff  liblangid.dylib  ???
+0x7ff8236ea000 - 0x7ff8237ccfff  CoreNLP  ???
+0x7ff8237cd000 - 0x7ff8237d3fff  LinguisticData  ???
+0x7ff8237d4000 - 0x7ff823ea3fff  libBNNS.dylib  ???
+0x7ff823ea4000 - 0x7ff824073fff  libvDSP.dylib  ???
+0x7ff824074000 - 0x7ff824085fff  CoreEmoji  ???
+0x7ff824086000 - 0x7ff824090fff  IOMobileFramebuffer  ???
+0x7ff824395000 - 0x7ff824421fff  SecurityFoundation  ???
+0x7ff824422000 - 0x7ff82442bfff  BackgroundTaskManagement  ???
+0x7ff824431000 - 0x7ff824433fff  libquarantine.dylib  ???
+0x7ff824434000 - 0x7ff82443ffff  libCheckFix.dylib  ???
+0x7ff824440000 - 0x7ff824457fff  libcoretls.dylib  ???
+0x7ff824458000 - 0x7ff824467fff  libbsm.0.dylib  ???
+0x7ff824468000 - 0x7ff8244c4fff  libmecab.dylib  ???
+0x7ff8244c5000 - 0x7ff8244c7fff  libgermantok.dylib  ???
+0x7ff8244c8000 - 0x7ff8244ddfff  libLinearAlgebra.dylib  ???
+0x7ff8244de000 - 0x7ff82470efff  MPSNeuralNetwork  ???
+0x7ff82470f000 - 0x7ff824768fff  MPSRayIntersector  ???
+0x7ff824953000 - 0x7ff82498bfff  MPSMatrix  ???
+0x7ff82498c000 - 0x7ff824a2efff  MPSNDArray  ???
+0x7ff824a2f000 - 0x7ff824ac3fff  MPSImage  ???
+0x7ff824ac4000 - 0x7ff824ad3fff  AppleFSCompression  ???
+0x7ff824ad4000 - 0x7ff824ae1fff  libbz2.1.0.dylib  ???
+0x7ff824ae2000 - 0x7ff824ae6fff  libsystem_coreservices.dylib  ???
+0x7ff824ae7000 - 0x7ff824b13fff  OSServices  ???
+0x7ff824d30000 - 0x7ff824d42fff  libz.1.dylib  ???
+0x7ff824d43000 - 0x7ff824da3fff  libsystem_m.dylib  ???
+0x7ff824da4000 - 0x7ff824da4fff  libcharset.1.dylib  ???
+0x7ff824da5000 - 0x7ff824daafff  libmacho.dylib  ???
+0x7ff824dab000 - 0x7ff824dc6fff  libkxld.dylib  ???
+0x7ff824dc7000 - 0x7ff824dd2fff  libcommonCrypto.dylib  ???
+0x7ff824dd3000 - 0x7ff824dddfff  libunwind.dylib  ???
+0x7ff824dde000 - 0x7ff824de5fff  liboah.dylib  ???
+0x7ff824de6000 - 0x7ff824deffff  libcopyfile.dylib  ???
+0x7ff824df0000 - 0x7ff824df7fff  libcompiler_rt.dylib  ???
+0x7ff824df8000 - 0x7ff824dfcfff  libsystem_collections.dylib  ???
+0x7ff824dfd000 - 0x7ff824dfffff  libsystem_secinit.dylib  ???
+0x7ff824e00000 - 0x7ff824e01fff  libremovefile.dylib  ???
+0x7ff824e02000 - 0x7ff824e02fff  libkeymgr.dylib  ???
+0x7ff824e03000 - 0x7ff824e0afff  libsystem_dnssd.dylib  ???
+0x7ff824e0b000 - 0x7ff824e0ffff  libcache.dylib  ???
+0x7ff824e10000 - 0x7ff824e11fff  libSystem.B.dylib  ???
+0x7ff824e12000 - 0x7ff824e15fff  libfakelink.dylib  ???
+0x7ff824e16000 - 0x7ff824e16fff  SoftLinking  ???
+0x7ff824e17000 - 0x7ff824e4dfff  libpcap.A.dylib  ???
+0x7ff824e4e000 - 0x7ff824f3ffff  libiconv.2.dylib  ???
+0x7ff824f40000 - 0x7ff824f50fff  libcmph.dylib  ???
+0x7ff824f51000 - 0x7ff824fd7fff  libarchive.2.dylib  ???
+0x7ff824fd8000 - 0x7ff82503efff  SearchKit  ???
+0x7ff82503f000 - 0x7ff825040fff  libThaiTokenizer.dylib  ???
+0x7ff825041000 - 0x7ff825063fff  AppleSauce  ???
+0x7ff825064000 - 0x7ff82507cfff  libapple_nghttp2.dylib  ???
+0x7ff82507d000 - 0x7ff825092fff  libSparseBLAS.dylib  ???
+0x7ff825093000 - 0x7ff825094fff  MetalPerformanceShaders  ???
+0x7ff825095000 - 0x7ff825099fff  libpam.2.dylib  ???
+0x7ff82509a000 - 0x7ff82516ffff  libcompression.dylib  ???
+0x7ff825170000 - 0x7ff825175fff  libQuadrature.dylib  ???
+0x7ff825176000 - 0x7ff82551bfff  libLAPACK.dylib  ???
+0x7ff82551c000 - 0x7ff82556afff  DictionaryServices  ???
+0x7ff82556b000 - 0x7ff825584fff  liblzma.5.dylib  ???
+0x7ff825585000 - 0x7ff825586fff  libcoretls_cfhelpers.dylib  ???
+0x7ff825587000 - 0x7ff8255f3fff  APFS  ???
+0x7ff8255f4000 - 0x7ff825601fff  libxar.1.dylib  ???
+0x7ff825602000 - 0x7ff825605fff  libutil.dylib  ???
+0x7ff825606000 - 0x7ff82562dfff  libxslt.1.dylib  ???
+0x7ff82562e000 - 0x7ff825634fff  libChineseTokenizer.dylib  ???
+0x7ff825635000 - 0x7ff82578cfff  libvMisc.dylib  ???
+0x7ff82578d000 - 0x7ff825823fff  libate.dylib  ???
+0x7ff825824000 - 0x7ff82582bfff  libIOReport.dylib  ???
+0x7ff8259f2000 - 0x7ff825a41fff  AppleVA  ???
+0x7ff825a42000 - 0x7ff825a5bfff  libexpat.1.dylib  ???
+0x7ff825a5c000 - 0x7ff825a64fff  libheimdal-asn1.dylib  ???
+0x7ff825aec000 - 0x7ff825b4ffff  MediaExperience  ???
+0x7ff825b79000 - 0x7ff825b87fff  GraphVisualizer  ???
+0x7ff825b88000 - 0x7ff825fa4fff  FaceCore  ???
+0x7ff825fa5000 - 0x7ff825fedfff  OTSVG  ???
+0x7ff825fee000 - 0x7ff825ff5fff  AppServerSupport  ???
+0x7ff825ff6000 - 0x7ff825ffffff  libhvf.dylib  ???
+0x7ff826000000 - 0x7ff826004fff  libspindump.dylib  ???
+0x7ff826005000 - 0x7ff8260befff  Heimdal  ???
+0x7ff8262b5000 - 0x7ff8262fffff  AppleJPEG  ???
+0x7ff826300000 - 0x7ff8263e2fff  libJP2.dylib  ???
+0x7ff8263e3000 - 0x7ff8263e6fff  WatchdogClient  ???
+0x7ff8263e7000 - 0x7ff82641dfff  MultitouchSupport  ???
+0x7ff82641e000 - 0x7ff82699efff  VideoToolbox  ???
+0x7ff82699f000 - 0x7ff8269cefff  libAudioToolboxUtility.dylib  ???
+0x7ff8269cf000 - 0x7ff8269effff  libPng.dylib  ???
+0x7ff8269f0000 - 0x7ff826a51fff  libTIFF.dylib  ???
+0x7ff826a52000 - 0x7ff826a6efff  IOPresentment  ???
+0x7ff826a6f000 - 0x7ff826a75fff  GPUWrangler  ???
+0x7ff826a76000 - 0x7ff826a78fff  libRadiance.dylib  ???
+0x7ff826a79000 - 0x7ff826a7efff  DSExternalDisplay  ???
+0x7ff826a7f000 - 0x7ff826aaefff  libJPEG.dylib  ???
+0x7ff826aaf000 - 0x7ff826adefff  ATSUI  ???
+0x7ff826adf000 - 0x7ff826ae3fff  libGIF.dylib  ???
+0x7ff826ae4000 - 0x7ff826aedfff  CMCaptureCore  ???
+0x7ff826aee000 - 0x7ff826b55fff  PrintCore  ???
+0x7ff827914000 - 0x7ff827944fff  libSessionUtility.dylib  ???
+0x7ff827945000 - 0x7ff827a7ffff  AudioToolbox  ???
+0x7ff827a80000 - 0x7ff827aeefff  AudioSession  ???
+0x7ff827aef000 - 0x7ff827b02fff  libAudioStatistics.dylib  ???
+0x7ff827b03000 - 0x7ff827b12fff  SpeechSynthesis  ???
+0x7ff827b13000 - 0x7ff827b7efff  ATS  ???
+0x7ff827b7f000 - 0x7ff827b97fff  libresolv.9.dylib  ???
+0x7ff827d44000 - 0x7ff827e23fff  libSMC.dylib  ???
+0x7ff827e24000 - 0x7ff827e83fff  libcups.2.dylib  ???
+0x7ff827e8f000 - 0x7ff827e96fff  ColorSyncLegacy  ???
+0x7ff827e97000 - 0x7ff827ea2fff  QD  ???
+0x7ff827ea3000 - 0x7ff8281cafff  AudioResourceArbitration  ???
+0x7ff8281cb000 - 0x7ff8281d7fff  perfdata  ???
+0x7ff8281d8000 - 0x7ff8281e6fff  libperfcheck.dylib  ???
+0x7ff8281e7000 - 0x7ff8281f5fff  Kerberos  ???
+0x7ff8281f6000 - 0x7ff828241fff  GSS  ???
+0x7ff828242000 - 0x7ff828251fff  CommonAuth  ???
+0x7ff82af80000 - 0x7ff82af80fff  libsystem_product_info_filter.dylib  ???
+0x7ff82b082000 - 0x7ff82b082fff  vecLib  ???
+0x7ff82b0ab000 - 0x7ff82b0abfff  CoreServices  ???
+0x7ff82b2f6000 - 0x7ff82b2f6fff  Accelerate  ???
+0x7ff82be95000 - 0x7ff82bebafff  PowerLog  ???
+0x7ff82e967000 - 0x7ff82e967fff  ApplicationServices  ???
+0x7ff82ece4000 - 0x7ff82ece4fff  libHeimdalProxy.dylib  ???
+0x7ff830b8e000 - 0x7ff830bfafff  CoreMIDI  ???
+0x7ff831257000 - 0x7ff83125afff  IOSurfaceAccelerator  ???
+0x7ff91b224000 - 0x7ff91b22bfff  OSAServicesClient  ???
+0x7ff91ee12000 - 0x7ff91ee31fff  SystemPolicy  ???
+0x7ff91f8a4000 - 0x7ff91f8befff  libmis.dylib  ???
+0x7ffa2320e000 - 0x7ffa2321dfff  libSimplifiedChineseConverter.dylib  ???
+0x7ffa31d48000 - 0x7ffa31d4efff  libCoreFSCache.dylib  ???
+0x7ffa31d4f000 - 0x7ffa31d53fff  libCoreVMClient.dylib  ???
+0x7ffa31d54000 - 0x7ffa31d63fff  OpenGL  ???
+0x7ffa31d64000 - 0x7ffa31d66fff  libCVMSPluginSupport.dylib  ???
+0x7ffa31d67000 - 0x7ffa31d6ffff  libGFXShared.dylib  ???
+0x7ffa31d70000 - 0x7ffa31da3fff  libGLImage.dylib  ???
+0x7ffa31da4000 - 0x7ffa31de1fff  libGLU.dylib  ???
+0x7ffa31f75000 - 0x7ffa31f7ffff  libGL.dylib  ???
+0x7ffa33384000 - 0x7ffa333dbfff  OpenCL  ???
+0x7ffa36969000 - 0x7ffa3697bfff  MPSFunctions  ???
+0x7ffb1dcf4000 - 0x7ffb1dcf4fff  FontServices  ???
+0x7ffb1dcf5000 - 0x7ffb1dd80fff  libXTFontStaticRegistryData.dylib  ???
+0x7ffb1dde9000 - 0x7ffb1ddecfff  libGPUCompilerUtils.dylib  ???
+0x7ffb2fb79000 - 0x7ffb2fb84fff  libCoreEntitlements.dylib  ???
