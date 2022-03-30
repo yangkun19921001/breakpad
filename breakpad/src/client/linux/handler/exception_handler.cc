@@ -490,7 +490,7 @@ bool ExceptionHandler::SimulateSignalDelivery(int sig) {
   siginfo.si_code = SI_USER;
   siginfo.si_pid = getpid();
   ucontext_t context;
-  getcontext(&context);
+//  getcontext(&context);
   return HandleSignal(sig, &siginfo, &context);
 }
 
@@ -675,7 +675,8 @@ bool ExceptionHandler::WriteMinidump() {
   sys_prctl(PR_SET_DUMPABLE, 1, 0, 0, 0);
 
   CrashContext context;
-  int getcontext_result = getcontext(&context.context);
+//  int getcontext_result = getcontext(&context.context);
+  int getcontext_result = 1;
   if (getcontext_result)
     return false;
 
